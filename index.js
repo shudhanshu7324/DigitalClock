@@ -20,16 +20,16 @@ let nightImageUrl =
 
 let time = new Date();
 
-if (time.getHours() >= 19 && time.getHours <= 5) {
-  document.body.style.backgroundImage = `url(${nightImageUrl})`;
-} else if (time.getHours() >= 16 && time.getHours < 19) {
-  document.body.style.backgroundImage = `url(${eveningImageUrl})`;
-} else if (time.getHours() >= 12 && time.getHours < 16) {
-  document.body.style.backgroundImage = `url(${afternoonImageUrl})`;
+if (time.getHours() >= 5 && time.getHours < 8) {
+  document.body.style.backgroundImage = `url(${sunriseImageUrl})`;
 } else if (time.getHours() >= 8 && time.getHours < 12) {
   document.body.style.backgroundImage = `url(${morningImageUrl})`;
+} else if (time.getHours() >= 12 && time.getHours < 16) {
+  document.body.style.backgroundImage = `url(${afternoonImageUrl})`;
+} else if (time.getHours() >= 16 && time.getHours < 19) {
+  document.body.style.backgroundImage = `url(${eveningImageUrl})`;
 } else {
-  document.body.style.backgroundImage = `url(${sunriseImageUrl})`;
+  document.body.style.backgroundImage = `url(${nightImageUrl})`;
 }
 
 function updateClock() {
